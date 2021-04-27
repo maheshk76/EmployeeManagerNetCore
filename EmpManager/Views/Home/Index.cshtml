@@ -1,0 +1,65 @@
+﻿@model EmpManager.Models.FilterModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+
+<h2>Index</h2>
+<div class="row  filters">
+    
+    <div class="tp-loader">
+        <div class="spinner0">
+            <img src="~/css/loader.gif" />
+        </div>
+        </div>
+    <div class="row col-lg-12">
+        <div class=" col-md-5">
+            <a href="@Url.Action("EmpForm","Employee")" class="btn btn-primary">Add Employee</a>
+        </div>
+        <div class=" col-md-2">
+            <a href="@Url.Action("AssignProject","Home")" class="btn btn-primary">Assign Project</a>
+        </div>
+        <div class="col-md-4" style="float:right">
+            <div class=" col-md-10">
+                <a href="@Url.Action("ProjectForm","Project")" class="btn btn-primary">Add New Project</a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-12 mt-3">
+        <div class="col-md-5">
+            @Html.LabelFor(model => model.Sdate)
+            @Html.TextBoxFor(model => model.Sdate, new { @max = DateTime.Now.Date.ToString("yyyy-MM-dd"), @placeholder = "SDate", @type = "date", @class = "form-control" })
+        </div>
+        <div class="col-md-5">
+            @Html.LabelFor(model => model.Edate)
+            @Html.TextBoxFor(model => model.Edate, new { @type = "date", @class = "form-control datepicker" })
+        </div>
+    </div>
+    <div class="row col-md-12 mt-3">
+        <div class="col-md-7">
+            @Html.EditorFor(model => model.Search, new { htmlAttributes = new { @placeholder = "Search", @class = "form-control" } })
+        </div>
+    </div>
+    <div class="row mt-5 col-md-12">
+        <div class=" col-md-1">
+            <input type="button" value="Search" class="btn btn-primary search-btn" />
+        </div>
+
+        <div class=" col-sm-2">
+            <input type="button" value="Clear filters" class="btn btn-danger clear-btn" />
+        </div>
+        <div class=" col-md-8" >
+            <div class="col-md-7" >
+                @Html.DropDownListFor(model => model.Pagesize, new SelectList(Model.RecordserPage, "Value", "Text"), new { @class = "form-control col-md-2"})
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="datadiv" id="datadiv">
+    </div>
+
+
+
+

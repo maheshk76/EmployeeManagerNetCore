@@ -1,0 +1,104 @@
+﻿@model IEnumerable<EmpManager.Models.EmpProjectListViewModel>
+
+<table class="table">
+     @if (!Model.Any())
+    {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Oops!</h4>
+            <h2>No Records found!</h2>
+            <hr />
+        </div>
+    }
+    else
+    {
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FullName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.JoiningDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProjectName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cost)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JoiningDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cost)
+                    </td>
+                    <td>
+                        <a asp-controller="Home" asp-action="AssignProject" asp-route-id="@item.EmpToProjectId"><i class="fa fa-pencil-alt"></i></a> |
+                        <button class="deletedata" data-value="@item.EmpToProjectId"><i class="fa fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+                }
+            </tbody>
+    }
+</table>
+<table cellpadding="0" cellspacing="0">
+    <tr>
+
+        @for (int i = 1; i <= @ViewBag.TotalPages; i++)
+        {
+
+            <td>
+                @if (i != @ViewBag.CurrPage)
+                {
+                    <a class="pages btn btn-default" href="javascript:Goto(@i);">@i</a>
+                }
+                else
+                {
+                    <span class="pages btn btn-primary">@i</span>
+                }
+            </td>
+        }
+    </tr>
+</table>
+<input type="hidden" id="curpageidx" name="cPage" />
+<script>
+    $(document).ready(function () {
+
+        $(".deletedata").on("click"
+            , function () {
+                var id = $(this).attr("data-value");
+                bootbox.confirm("Are you sure want to delete?", function (result) {
+                    if (result) {
+                        $.ajax({
+
+                            url: '/Home/Delete',
+                            type: "POST",
+                            data: {
+                                id:id
+                            }
+                        })
+                            .done(function (response) {
+                                toastr.success("deleted succesfully");
+                                setTimeout(function () { window.location.reload(); }, 2000);
+                            })
+                            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                                alert("FAIL");
+                            })
+                            .always(function () {
+                            });
+                    }
+                });
+            });
+    });
+</script>

@@ -1,0 +1,412 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+/*------------------*/
+/*-----------------------------------------------------------------------------
+
+-	Revolution Slider 5.0 Default Style Settings -
+
+Screen Stylesheet
+
+version:   	5.0.0
+date:      	29/10/15
+author:		themepunch
+email:     	info@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+
+
+
+
+/***********************************************
+	-	SPECIAL ALTERNATIVE IMAGE SETTINGS	-
+***********************************************/
+
+img.tp-slider-alternative-image {
+    width: 100%;
+    height: auto;
+}
+
+
+/******************************
+	-	IE8 HACKS	-
+*******************************/
+.noFilterClass {
+    filter: none !important;
+}
+
+
+/********************************
+	-	FULLSCREEN VIDEO	-
+*********************************/
+
+.rs-background-video-layer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 0;
+}
+
+.tp-caption.coverscreenvideo {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.caption.fullscreenvideo,
+.tp-caption.fullscreenvideo {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+    .caption.fullscreenvideo iframe,
+    .caption.fullscreenvideo audio,
+    .caption.fullscreenvideo video,
+    .tp-caption.fullscreenvideo iframe,
+    .tp-caption.fullscreenvideo iframe audio,
+    .tp-caption.fullscreenvideo iframe video {
+        width: 100% !important;
+        height: 100% !important;
+        display: none
+    }
+
+.fullcoveredvideo audio,
+.fullscreenvideo audio
+.fullcoveredvideo video,
+.fullscreenvideo video {
+    background: #000
+}
+
+.fullcoveredvideo .tp-poster {
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px
+}
+
+
+/******************************
+	-	LOADER FORMS	-
+********************************/
+
+.tp-loader {
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    position: absolute;
+}
+
+    .tp-loader.spinner0 {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        background: url(loader.gif) no-repeat center center;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        margin-top: -20px;
+        margin-left: -20px;
+        -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
+        animation: tp-rotateplane 1.2s infinite ease-in-out;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+
+    .tp-loader.spinner1 {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        margin-top: -20px;
+        margin-left: -20px;
+        -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
+        animation: tp-rotateplane 1.2s infinite ease-in-out;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+
+
+    .tp-loader.spinner5 {
+        background: url(loader.gif) no-repeat 10px 10px;
+        background-color: #fff;
+        margin: -22px -22px;
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+    }
+
+
+@-webkit-keyframes tp-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes tp-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+
+.tp-loader.spinner2 {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    background-color: #ff0000;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    border-radius: 100%;
+    -webkit-animation: tp-scaleout 1.0s infinite ease-in-out;
+    animation: tp-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes tp-scaleout {
+    0% {
+        -webkit-transform: scale(0.0)
+    }
+
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes tp-scaleout {
+    0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+
+.tp-loader.spinner3 {
+    margin: -9px 0px 0px -35px;
+    width: 70px;
+    text-align: center;
+}
+
+    .tp-loader.spinner3 .bounce1,
+    .tp-loader.spinner3 .bounce2,
+    .tp-loader.spinner3 .bounce3 {
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: tp-bouncedelay 1.4s infinite ease-in-out;
+        animation: tp-bouncedelay 1.4s infinite ease-in-out;
+        /* Prevent first frame from flickering when animation starts */
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .tp-loader.spinner3 .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .tp-loader.spinner3 .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+
+@-webkit-keyframes tp-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes tp-bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+    }
+
+    40% {
+        transform: scale(1.0);
+    }
+}
+
+
+
+
+.tp-loader.spinner4 {
+    margin: -20px 0px 0px -20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    -webkit-animation: tp-rotate 2.0s infinite linear;
+    animation: tp-rotate 2.0s infinite linear;
+}
+
+    .tp-loader.spinner4 .dot1,
+    .tp-loader.spinner4 .dot2 {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: #fff;
+        border-radius: 100%;
+        -webkit-animation: tp-bounce 2.0s infinite ease-in-out;
+        animation: tp-bounce 2.0s infinite ease-in-out;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    }
+
+    .tp-loader.spinner4 .dot2 {
+        top: auto;
+        bottom: 0px;
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+
+@-webkit-keyframes tp-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes tp-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes tp-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes tp-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+    }
+}
+
+
