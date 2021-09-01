@@ -1,4 +1,5 @@
-﻿using EmpManager.Models;
+﻿using EmpManager.Constants;
+using EmpManager.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,13 @@ namespace EmpManager.Controllers
         {
             if (id == null)
             {
-                ViewBag.VTitle = "Create";
+                ViewBag.VTitle = ViewType.Create;
                 return View();
             }
             else
             {
                 Project emp = _context.Projects.Find(id);
-                ViewBag.VTitle = "Edit";
+                ViewBag.VTitle = ViewType.Edit;
                 return View(emp);
             }
         }
@@ -51,7 +52,7 @@ namespace EmpManager.Controllers
 
             _context.Projects.Remove(empInDb);
             await _context.SaveChangesAsync();
-            JsonResult result = new JsonResult(new { Success = true, Message = "Deleted Successfully" });
+            JsonResult result = new JsonResult(new { Success = true, Message = ResponseMessage.Deleted });
             return result;
         }
     }

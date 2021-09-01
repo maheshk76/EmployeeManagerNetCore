@@ -36,8 +36,8 @@
                         console.log(k + " " + v.innerHTML);
                         var kv = v.innerHTML.split("|");
                         if (kv[1].includes("Project")) {
-                            var t = "<b class='alert-info text-info' style='float:right;font-size:12px;border-radius:20px;padding:2px 14px 2px;'>" + kv[1] + "</b>";
-
+                            var t = "<b class='projecttag'>" + kv[1] + "</b>";
+                            
                             v.innerHTML = kv[0] + t;
                         }
                         else {

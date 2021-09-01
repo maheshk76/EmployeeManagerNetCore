@@ -1,4 +1,5 @@
 ﻿
+using EmpManager.Constants;
 using EmpManager.Models;
 using EmpManager.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -20,21 +21,21 @@ namespace EmpManager.Controllers
         }
         public IActionResult Index()
         {
-         
-            return View(_repo.Get());
+            List<Employee> Employees = _repo.Get();
+            return View(Employees);
         }
         public IActionResult EmpForm(int? id)
         {
             if (id == null)
             {
-                ViewBag.VTitle = "Create";
+                ViewBag.VTitle = ViewType.Create;
                 return View();
             }
             else
             {
-                Employee emp = _repo.Get((int)id);
-                ViewBag.VTitle = "Edit";
-                return View(emp);
+                Employee employee = _repo.Get((int)id);
+                ViewBag.VTitle = ViewType.Edit;
+                return View(employee);
             }
         }
         [HttpPost]
@@ -51,7 +52,7 @@ namespace EmpManager.Controllers
         public JsonResult Delete(int? id)
         {
             _repo.Delete((int)id);
-            JsonResult result = new JsonResult((Success: true, Message: "Deleted Successfully"));
+            JsonResult result = new JsonResult((Success: true, Message: ResponseMessage.Deleted));
             return result;
         }
     }

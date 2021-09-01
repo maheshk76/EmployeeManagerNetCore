@@ -8610,11 +8610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mahesh.Kantariya\\Desktop\\EmpManager\\EmpManager\\EmpManager.csproj",
+      "projectUniqueName": "C:\\Users\\Mahesh.Kantariya\\Documents\\EmpManager\\EmpManager\\EmpManager.csproj",
       "projectName": "EmpManager",
-      "projectPath": "C:\\Users\\Mahesh.Kantariya\\Desktop\\EmpManager\\EmpManager\\EmpManager.csproj",
+      "projectPath": "C:\\Users\\Mahesh.Kantariya\\Documents\\EmpManager\\EmpManager\\EmpManager.csproj",
       "packagesPath": "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mahesh.Kantariya\\Desktop\\EmpManager\\EmpManager\\obj\\",
+      "outputPath": "C:\\Users\\Mahesh.Kantariya\\Documents\\EmpManager\\EmpManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mahesh.Kantariya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8676,6 +8676,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.17, 3.1.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8684,7 +8690,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

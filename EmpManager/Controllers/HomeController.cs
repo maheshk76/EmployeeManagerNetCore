@@ -7,6 +7,7 @@ using Microsoft.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using EmpManager.Constants;
 
 namespace EmpManager.Controllers
 {
@@ -97,6 +98,7 @@ namespace EmpManager.Controllers
                 var TotalPages = (int)Math.Ceiling((double)((decimal)possiblerows / Pagesize));
                 ViewBag.TotalPages = TotalPages;
                 ViewBag.CurrPage = cPage;
+                
             }
             return PartialView(Employeelist);
         }
@@ -123,7 +125,7 @@ namespace EmpManager.Controllers
             EmployeeToProject empInDb = await _context.EmployeeToProjects.FindAsync(id);
             _context.EmployeeToProjects.Remove(empInDb);
             await _context.SaveChangesAsync();
-            JsonResult result = new JsonResult((Success: true, Message: "Deleted Successfully"));
+            JsonResult result = new JsonResult((Success: true, Message: ResponseMessage.Deleted));
             return result;
         }
         public IActionResult Privacy()

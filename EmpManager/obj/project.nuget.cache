@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g7bR4hBPzQ67rhw9ks37ApuGhq7/mRQVqm82OCxrlcaLn/+NSt4hzstdeXAkYRslx+aRihqOmEUx0I3seSzhng==",
+  "dgSpecHash": "XxmCEp0r5Ws2CfiJRkR4fte9A4m08Flli0NsE0mtDnqUA8siqIYJnRfe31dX2a9mhyDNGC6mQWni4upYHNYxgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mahesh.Kantariya\\Desktop\\EmpManager\\EmpManager\\EmpManager.csproj",
+  "projectFilePath": "C:\\Users\\Mahesh.Kantariya\\Documents\\EmpManager\\EmpManager\\EmpManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -163,7 +163,8 @@
     "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Mahesh.Kantariya\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
   ],
   "logs": []
 }
