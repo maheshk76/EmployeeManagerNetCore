@@ -41,6 +41,7 @@ namespace EmpManager.Controllers
                 _context.Projects.Add(project);
             else
                 _context.Update(project);
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
 
